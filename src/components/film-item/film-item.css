@@ -1,0 +1,79 @@
+.wrapper {
+    display: flex;
+    width: 454px;
+    height: 281px;
+    box-shadow: 5px 5px 5px #827E7E;
+    margin-right: 36px;
+    float: right;
+    margin-bottom: 35px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 49px 20px;
+    position: relative;
+}
+
+img {
+    width: 183px;
+    height: 281px;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom: 7px;
+    line-height: 1.2;
+    width: 200px;
+}
+
+.data {
+    color: #827E7E;
+    margin-bottom: 9px;
+}
+
+span {
+    color: #827E7E;
+    margin-right: 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+}
+
+p {
+    width: 228px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.card {
+    margin: 32px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.vote-average-1, .vote-average-2, .vote-average-3, .vote-average-4  {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.vote-average-1 {
+    border: 2px solid #E90000;
+}
+
+.vote-average-2 {
+    border: 2px solid #E97E00;
+}
+.vote-average-3 {
+    border: 2px solid #E9D100;
+}
+.vote-average-4 {
+    border: 2px solid #66E900;
+}
