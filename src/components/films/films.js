@@ -78,6 +78,9 @@ export default class FilmItem extends Component {
         const { query, page, vote_average } = this.state
         
         if( this.state.query !== prevState.query || this.state.page !== prevState.page || this.state.genres !== prevState.genres ) {
+            this.genresMovie().then((resp) => {
+                this.setState({ genres: resp.genres})
+              }); 
             // setTimeout(() => {
             //     this.fetchMovie().then((rez) => {
             //         this.setState({ movies: rez.results, loading: false, total: rez.total_results, page, genres: rez.genres})
@@ -91,13 +94,14 @@ export default class FilmItem extends Component {
             .then((resp) => resp.json())
             .then((rez) => this.setState({ movies: rez.results, loading: false , total: rez.total_results, page, vote_average }))
             .catch(this.onError)
-        // fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=5ca9351192cf8dad1d64a9603a0a46bb&language=en-US')
-        // .then((data)=> data.json())
-        // .then( (resp) => this.setState({ genres: resp.genres}))
+       
         
         }
-    
      }
+
+    //  fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=5ca9351192cf8dad1d64a9603a0a46bb&language=en-US')
+    //  .then((data)=> data.json())
+    //  .then( (resp) => this.setState({ genres: resp.genres}))
  
     onError =  (err) => {
          this.setState({
@@ -116,6 +120,9 @@ export default class FilmItem extends Component {
         this.setState(({ page }) => {
             return { page: count }
          })
+        //  this.genresMovie().then((resp) => {
+        //     this.setState({ genres: resp.genres})
+        //   });
     }
 
     onStarChange =  async (id, rate) => {
@@ -147,8 +154,8 @@ export default class FilmItem extends Component {
         
         const search = total === 0 ? <Alert style={{margin:'0 auto', fontSize:'16px'}} message="Nothing found for your request" /> : null
 
-        const newGeneres = genres?.map((el) => el)
-       
+        // const newGeneres = genres?.map((el) => el)
+        // console.log(movies)
        return (
         <Provider value={ genres }>
         <Tabs defaultActiveKey="1" centered destroyInactiveTabPane>
@@ -159,7 +166,7 @@ export default class FilmItem extends Component {
              <div className="card">
              { spinner }
             { errorMessage }
-            { movies.map(movie => ( <CardFilm {...movie} onStarChange={ this.onStarChange } key={ movie.id } genres={ newGeneres } />)) }
+            { movies.map(movie => ( <CardFilm {...movie} onStarChange={ this.onStarChange } key={ movie.id } genres={ genres } />)) }
             { search }
            </div>
            <Pagination total={ total }
