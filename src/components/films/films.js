@@ -55,7 +55,7 @@ export default class FilmItem extends Component {
           }, 1000);
           this.genresMovie().then((resp) => {
             this.setState({ genres: resp.genres})
-          });
+          }); 
         
         // fetch(`https://api.themoviedb.org/3/search/movie?api_key=5ca9351192cf8dad1d64a9603a0a46bb&query=return&page=${ page }`)
         //     .then((response) => {
