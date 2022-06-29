@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import './connect.css'
 
-import FilmItem from "../film-item/film-item";
+import FilmItem from "../films/films";
 
 function Connect() {
     const [isOffline, setIsOffline] = useState(false);

@@ -77,3 +77,9 @@ p {
 .vote-average-4 {
     border: 2px solid #66E900;
 }
+
+.movie {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}

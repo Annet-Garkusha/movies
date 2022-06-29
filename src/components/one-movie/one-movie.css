@@ -1,0 +1,14 @@
+.rate-wrapper {
+    display: flex;
+    width: 454px;
+    height: 281px;
+    box-shadow: 5px 5px 5px #827E7E;
+    margin-right: 36px;
+    
+    margin-bottom: 35px;
+    justify-content: flex-start;
+}
+
+.movie-rate {
+    margin-bottom: 10px;
+}

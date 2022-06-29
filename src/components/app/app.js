@@ -2,7 +2,7 @@ import React from "react";
 
 import './app.css'
 
-import FilmItem from "../film-item/film-item";
+import FilmItem from "../films/films";
 import Connect from "../connect/connect";
 
 
