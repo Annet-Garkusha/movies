@@ -138,7 +138,6 @@ export default class FilmItem extends Component {
           localStorage.setItem('selectedMovies', newMovies);
     }
 
-
     render() {
         const { loading, error, movies, total, genres } = this.state
         const { TabPane } = Tabs;
