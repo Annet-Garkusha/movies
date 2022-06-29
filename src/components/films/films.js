@@ -98,8 +98,6 @@ export default class FilmItem extends Component {
         }
     
      }
-
-    
  
     onError =  (err) => {
          this.setState({
