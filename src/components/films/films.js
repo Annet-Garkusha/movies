@@ -74,7 +74,6 @@ export default class FilmItem extends Component {
      }
 
     
-    
      componentDidUpdate(prevProps, prevState) {
         const { query, page, vote_average } = this.state
         
