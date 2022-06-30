@@ -19,7 +19,7 @@ const RatedMovie = () => {
       const film = getRatedMovie();
       setRateMovie(Object.values(film));
     } catch (Error) {
-      throw new Error('Error');
+      return undefined;
     }
   }, []);
   return (
