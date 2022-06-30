@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import './connect.css'
+import './connect.css';
 
-import FilmItem from "../films/films";
+import FilmItem from '../films/films';
 
 function Connect() {
-    const [isOffline, setIsOffline] = useState(false);
-    function onOffline() {
-      setIsOffline(true);
-    }
-    function onOnline() {
-      setIsOffline(false);
-    }
-    useEffect(() => {
-      window.addEventListener("offline", onOffline);
-      window.addEventListener("online", onOnline);
-      return () => {
-        window.removeEventListener("offline", onOffline);
-        window.removeEventListener("online", onOnline);
-      };
-    }, []);
-    if (isOffline) {
-      return <h1>Sorry, you are offline ...</h1>;
-    }
-    return <FilmItem />
+  const [isOffline, setIsOffline] = useState(false);
+  function onOffline() {
+    setIsOffline(true);
   }
+  function onOnline() {
+    setIsOffline(false);
+  }
+  useEffect(() => {
+    window.addEventListener('offline', onOffline);
+    window.addEventListener('online', onOnline);
+    return () => {
+      window.removeEventListener('offline', onOffline);
+      window.removeEventListener('online', onOnline);
+    };
+  }, []);
+  if (isOffline) {
+    return <h1>Sorry, you are offline ...</h1>;
+  }
+  return <FilmItem />;
+}
 
-  export default Connect
+export default Connect;

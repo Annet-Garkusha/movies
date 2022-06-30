@@ -1,20 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import './app.css'
+import './app.css';
 
-import FilmItem from "../films/films";
-import Connect from "../connect/connect";
+import FilmItem from '../films/films';
+import Connect from '../connect/connect';
 
-
-function App( { isOffline, filteredFilm }) {
-  
-  return (
-    <div className="main">
-      
-      { !isOffline ? <Connect /> : <FilmItem filteredFilm={ filteredFilm }/>}
-    
-    </div>
-  );
+function App({ isOffline, filteredFilm }) {
+  return <div className="main"> {!isOffline ? <Connect /> : <FilmItem filteredFilm={filteredFilm} />}</div>;
 }
 
 export default App;

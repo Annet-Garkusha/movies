@@ -1,14 +1,32 @@
 .rate-wrapper {
     display: flex;
-    width: 454px;
-    height: 281px;
+    width: 44%;
+    height: auto;
     box-shadow: 5px 5px 5px #827E7E;
     margin-right: 36px;
     
     margin-bottom: 35px;
     justify-content: flex-start;
+    transition-duration: .2s;
+}
+.rate-wrapper:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.genres {
+    background: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 8px;
+    padding: 0 7px;
+    text-align: center;
+    margin-bottom: 7px;
 }
 
 .movie-rate {
-    margin-bottom: 10px;
+    position: absolute;
+    bottom: 10px;
 }
