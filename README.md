@@ -1,1 +1,1 @@
-movies-plum-xi.vercel.app
+https://movies-plum-xi.vercel.app/
